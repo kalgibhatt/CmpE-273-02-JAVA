@@ -11,6 +11,7 @@ public class StackProblem
 	
 	public void showNewsFeed(StackProblem newsFeed) throws IOException
 	{
+		System.out.println("JAVA STACK IMPLEMENTATION\n");
 		System.out.println("Press enter to get next news..!!");
 		while(!stk.isEmpty())
 		{

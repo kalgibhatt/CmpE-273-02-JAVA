@@ -11,6 +11,7 @@ public class QueueProblem
 		input = new Scanner(System.in);
 		String inputString;
 		
+		System.out.println("JAVA QUEUE IMPLEMENTATION\n");
 		while(true)
 		{
 			System.out.print("Enter a string or exter exit : ");
