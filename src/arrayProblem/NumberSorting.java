@@ -1,4 +1,6 @@
-public class ArrayProblem
+package arrayProblem;
+
+public class NumberSorting
 {
 	public static int array[];
 	

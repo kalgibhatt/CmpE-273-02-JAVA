@@ -1,7 +1,8 @@
+package stackProblem;
 import java.io.IOException;
 import java.util.Stack;
 
-public class StackProblem
+public class NewsFeed
 {
 	Stack<String> stk = new Stack<>();
 	public void addNewsFeed(String newsFeed)
@@ -9,7 +10,7 @@ public class StackProblem
 		stk.push(newsFeed);
 	}
 	
-	public void showNewsFeed(StackProblem newsFeed) throws IOException
+	public void showNewsFeed(NewsFeed newsFeed) throws IOException
 	{
 		System.out.println("JAVA STACK IMPLEMENTATION\n");
 		System.out.println("Press enter to get next news..!!");
@@ -24,7 +25,7 @@ public class StackProblem
 	public static void main(String[] args) throws IOException 
 	{
 		// TODO Auto-generated method stub
-		StackProblem newsFeed = new StackProblem();
+		NewsFeed newsFeed = new NewsFeed();
 		newsFeed.addNewsFeed("The current temperature is 86" + Character.toString((char)0x00b0) + "F");
 		newsFeed.addNewsFeed("New iPhone may be unveiled Wednesday.");
 		newsFeed.addNewsFeed("88 former military leaders write letter backing Trump.");

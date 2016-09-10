@@ -1,9 +1,10 @@
+package queueProblem;
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Stack;
 import java.util.Scanner;
 
-public class QueueProblem 
+public class Palindrome 
 {
 	private static Scanner input;
 	public static void main(String[] args) 
