@@ -1,4 +1,5 @@
 package genericsProblem;
+
 import java.util.Arrays;
 
 public class Student implements Comparable<Student> 
@@ -12,8 +13,23 @@ public class Student implements Comparable<Student>
 		{
 			super();
 			this.studentName = studentName;
-			this.studentMarks = studentMarks;
-			this.studentAge = studentAge;
+			if(studentMarks < 0)
+			{
+				throw new ArithmeticException(" Marks not valid");
+			}
+			else
+			{
+				this.studentMarks = studentMarks;
+			}
+			
+			if(studentAge <= 0)
+			{
+				throw new ArithmeticException(" Age not valid");
+			}
+			else
+			{
+				this.studentAge = studentAge;
+			}
 		}
 
 		public String getstudentName()
@@ -56,7 +72,7 @@ public class Student implements Comparable<Student>
 
 		public static void main(String args[])
 		{
-
+			System.out.println("JAVA GENERICS IMPLEMENTATION\n");
 			Student[] student = new Student[4];
 
 			Student Keyur = new Student("Keyur",89,25);

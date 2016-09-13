@@ -15,7 +15,7 @@ public class Palindrome
 		System.out.println("JAVA QUEUE IMPLEMENTATION\n");
 		while(true)
 		{
-			System.out.print("Enter a string or exter exit : ");
+			System.out.print("Enter a word or number to check whether it is palindrome or not or exter exit : ");
 			inputString = input.next();
 			
 			if(!inputString.equals("exit"))

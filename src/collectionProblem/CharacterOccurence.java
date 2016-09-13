@@ -7,10 +7,12 @@ import java.util.HashMap;
 
 public class CharacterOccurence
 {
-	public static void CollectionProblem(String str)
+	public static Map<String, Integer> countOccurenceOfCharacters(String str)
 	{
-		String string = str;
-		String[] strArray = string.split("");
+		if(str.isEmpty()) {
+			throw new NullPointerException("Empty String Entered.");
+		}
+		String[] strArray = str.trim().split("");
 		List<String> list = new ArrayList<String>();
 		for(int i = 0; i< strArray.length; i++)
 		{
@@ -23,15 +25,7 @@ public class CharacterOccurence
 			Integer count = map.get(temp);
 			map.put(temp, count == null ? 1 : count + 1);
 		}
-		print(map);
-	}
-	
-	private static void print(Map<String , Integer> map)
-	{
-		for(Map.Entry<String , Integer> entry : map.entrySet())
-		{
-			System.out.println("Character : " + entry.getKey() + "  " + "Occurence : " + entry.getValue());
-		}
+		return map;
 	}
 	
 	public static void main(String args[])
@@ -40,6 +34,11 @@ public class CharacterOccurence
 		System.out.println(" \nEnter a String to know the occurence of characters : ");
 		Scanner sc = new Scanner(System.in);
 		String inputString = sc.nextLine();
-		CollectionProblem(inputString.toLowerCase());
+		
+		Map<String, Integer> map = countOccurenceOfCharacters(inputString.toUpperCase());
+		for(Map.Entry<String, Integer> entry : map.entrySet())
+		{
+			System.out.println("Character : " + entry.getKey() + "  Occurence : " + entry.getValue());
+		}
 	}
 }

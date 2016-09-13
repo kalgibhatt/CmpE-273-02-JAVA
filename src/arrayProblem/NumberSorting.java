@@ -1,61 +1,56 @@
 package arrayProblem;
 
 public class NumberSorting
-{
-	public static int array[];
-	
+{	
 	public static void main(String args[])
 	{
-		array = new int[13];
+		int array[] = new int[13];
 		
 		array[0] = 12;
-		array[1] = 1;
-		array[2] = 45;
-		array[3] = 56;
-		array[4] = 6;
-		array[5] = 123;
-		array[6] = 23;
-		array[7] = 0;
-		array[8] = 17;
-		array[9] = 98;
-		array[10] = 100;
-		array[11] = 78;
-		array[12] = 65;
+		array[1] = 0;
+		array[2] = 90;
+		array[3] = 50;
+		array[4] = 4;
+		array[5] = 76;
+		array[6] = 100;
+		array[7] = 30;
+		array[8] = 117;
+		array[9] = 8;
+		array[10] = 34;
+		array[11] = 97;
+		array[12] = 5;
 		
 		System.out.println("JAVA ARRAY IMPLEMENTATION\n");
 		System.out.println("The numbers to be sorted are :");
 		
-		result();
-		bubblesort();
+		result(array);
+		array = bubbleSort(array);
 		System.out.println("\nThe sorted numbers using Bubble Sort algorithm are :");
-		result();
+		result(array);
 	}
 	
-	public static void bubblesort()
+	public static int[] bubbleSort(int[] array) 
 	{
-		int min = 0,max = array.length - 1;
-		
-		for(int i = max;i > 1 ; i--)
-		{
-			for(int j = min;j < i; j++)
-			{
-				if(array[j] > array[j+1])
-				{
-					swap(j,j+1);
-				}
-			}
-		}
-		
+	    int n = array.length;
+	    int temp = 0;
+
+	    for (int i = 0; i < n; i++)
+	    {
+	        for (int j = 1; j < (n - i); j++)
+	        {
+	            if (array[j - 1] > array[j])
+	            {
+	                temp = array[j - 1];
+	                array[j - 1] = array[j];
+	                array[j] = temp;
+	            }
+
+	        }
+	    }
+		return array;
 	}
 	
-	public static void swap(int min,int max)
-	{
-		int temp = array[min];
-		array[min] = array[max];
-		array[max] = temp;
-	}
-	
-	public static void result()
+	public static void result(int[] array)
 	{
 		for(int i = 0; i < array.length;i++)
 		{

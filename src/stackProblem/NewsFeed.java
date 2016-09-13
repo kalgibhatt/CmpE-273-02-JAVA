@@ -10,7 +10,7 @@ public class NewsFeed
 		stk.push(newsFeed);
 	}
 	
-	public void showNewsFeed(NewsFeed newsFeed) throws IOException
+	public Stack<String> showNewsFeed(NewsFeed newsFeed) throws IOException
 	{
 		System.out.println("JAVA STACK IMPLEMENTATION\n");
 		System.out.println("Press enter to get next news..!!");
@@ -20,6 +20,7 @@ public class NewsFeed
 			System.in.read();
 		}
 		System.out.println("You are all caught up !!!!!");
+		return stk;
 	}
 	
 	public static void main(String[] args) throws IOException 

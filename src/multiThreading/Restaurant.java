@@ -43,6 +43,7 @@ class Waiter implements Runnable {
 
 class Restaurant {
 	public static void main(String[] args) {
+		System.out.println("JAVA MULTITHREADING IMPLEMENTATION\n");
 		Object obj = new Object();
 		Thread chef = new Thread(new Chef(obj));
 		Thread waiter = new Thread(new Waiter(obj));
