@@ -6,18 +6,16 @@ import org.junit.Test;
 
 public class TraingleTest 
 {
-	@Test
+	@Test(expected=ArithmeticException.class)
 	public void zeroSideTriangle()
 	{
 		Triangle triangle = new Triangle(0,2,3);
-		assertFalse(triangle.area() == 0 && triangle.perimeter() == 0);
 	}
 	
-	@Test
+	@Test(expected=ArithmeticException.class)
 	public void zeroSideRectangle()
 	{
 		Rectangle rectangle = new Rectangle(0,7);
-		assertTrue(rectangle.area() == 0 && rectangle.perimeter() == 0);
 	}
 	
 	@Test
@@ -38,14 +36,14 @@ public class TraingleTest
 	public void negativeSideTriangle()
 	{
 		Triangle triangle = new Triangle(-2,2,3);
-		assertTrue(triangle.area() == 0 && triangle.perimeter() == 0);
+		assertTrue(triangle.area() == 1.984313483298443 && triangle.perimeter() == 7);
 	}
 	
 	@Test
 	public void negativeSideRectangle()
 	{
 		Rectangle rectangle = new Rectangle(-8,7);
-		assertTrue(rectangle.area() == 0 && rectangle.perimeter() == 0);
+		assertTrue(rectangle.area() == 56 && rectangle.perimeter() == 30);
 	}
 
 }

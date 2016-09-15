@@ -12,33 +12,27 @@ class Rectangle implements Polygon
 	private double width;
 	private double height;
 
-	public Rectangle(double width, double height) {
-		this.width = width;
-		this.height = height;
+	public Rectangle(double width, double height) 
+	{
+		if(width == 0 || height == 0)
+		{
+			throw new ArithmeticException("Rectangle side not valid");
+		}
+		else
+		{
+			this.width = Math.abs(width);
+			this.height = Math.abs(height);
+		}
 	}
 
 	public double area() 
 	{
-		if(width <= 0 || height <= 0)
-		{
-			return 0;
-		}
-		else
-		{
 			return width * height;
-		}
 	}
 
 	public double perimeter() 
 	{
-		if(width <= 0 || height <= 0)
-		{
-			return 0;
-		}
-		else
-		{
 			return 2.0 * (width + height);
-		}
 	}
 }
 

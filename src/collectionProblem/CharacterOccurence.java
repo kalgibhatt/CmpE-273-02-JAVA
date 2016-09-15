@@ -9,7 +9,8 @@ public class CharacterOccurence
 {
 	public static Map<String, Integer> countOccurenceOfCharacters(String str)
 	{
-		if(str.isEmpty()) {
+		if(str.isEmpty()) 
+		{
 			throw new NullPointerException("Empty String Entered.");
 		}
 		String[] strArray = str.trim().split("");

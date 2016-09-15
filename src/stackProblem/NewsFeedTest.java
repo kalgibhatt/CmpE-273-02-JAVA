@@ -47,7 +47,8 @@ public class NewsFeedTest
 	{
 		Stack<String> s = new Stack<String>();
 		s.push("A");
-		assertEquals(s.peek(),"A");
+		s.push("B");
+		assertEquals(s.peek(),"B");
 	}
 	 
 	
