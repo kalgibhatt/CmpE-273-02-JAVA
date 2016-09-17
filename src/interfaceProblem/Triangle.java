@@ -41,8 +41,8 @@ class Triangle implements Polygon
 
 	public static void main(String args[]) 
 	{
-		Rectangle rectangle = new Rectangle(0, 7);
-		Triangle triangle = new Triangle(0, 2, 3);
+		Rectangle rectangle = new Rectangle(3.8, 7);
+		Triangle triangle = new Triangle(15, 12, 13);
 		System.out.println("JAVA INTERFACE IMPLEMENTATION\n");
 		System.out.println("The area of rectangle is :" + String.format("%.2f",rectangle.area()));
 		System.out.println("\nThe perimeter of rectangle is :" + String.format("%.2f",rectangle.perimeter()));
